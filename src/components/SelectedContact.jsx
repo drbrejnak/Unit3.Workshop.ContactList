@@ -20,6 +20,10 @@ export default function SelectedContact({ selectedContactId, setSelectedContactI
   }, [selectedContactId]);
   console.log("Contact: ", contact);
   return (
+    <>
+    <button onClick={() => {
+        setSelectedContactId(null);
+      }}>Return</button>
     <table>
       <thead>
         <tr>
@@ -39,5 +43,6 @@ export default function SelectedContact({ selectedContactId, setSelectedContactI
         </tr>
       </tbody>
     </table>
+    </>
   );
 }
